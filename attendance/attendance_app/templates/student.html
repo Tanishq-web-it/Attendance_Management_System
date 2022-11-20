@@ -1,0 +1,16 @@
+<h1>Heelo {{name}}!!!!!</h1>
+<!--<form action="/action_page.php">-->
+  <form method="post" action ="{% url 'student' %}">
+  {% csrf_token %}
+    <label for="First_name">First name:</label>
+    <input type="text" id="First_name" name="First_name"><br><br>
+    <label for="Last_name">Last name:</label>
+    <input type="text" id="Last_name" name="Last_name"><br>
+    <br><br>
+    <input type="checkbox" name="attendance" value="attendance">
+    <label for="attendance"> I am present</label><br><br>
+
+    <input type="submit" value="Submit"><br><br>
+    <a href="{% url 'teacherform' %}">Teacher Here</a>
+  </form>
+ 
